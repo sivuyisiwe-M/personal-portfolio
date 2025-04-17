@@ -107,10 +107,19 @@ const srtop = ScrollReveal({
 srtop.reveal('.experience .timeline', {delay: 400});
 srtop.reveal('.experience .timeline .container', {interval: 400}); 
 
-// Remove Tawk.to branding
-// if (typeof Tawk_API !== 'undefined') {
-//     Tawk_API.hideWidget();
-// }
+
+
+// Start of Tawk.to Live Chat
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/6800e4a6c5e333190b5b7a56/1ip1nqb1d';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+// End of Tawk.to Live Chat
 
 // Disable developer mode
 document.onkeydown = function(e) {

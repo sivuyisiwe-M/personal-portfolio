@@ -377,6 +377,20 @@ function loadSkills() {
     });
 }
 
+
+// Start of Tawk.to Live Chat
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/6800e4a6c5e333190b5b7a56/1ip1nqb1d';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+// End of Tawk.to Live Chat
+
+
 // Page title and favicon change
 document.addEventListener('visibilitychange', function () {
     if (document.visibilityState === "visible") {
@@ -388,30 +402,5 @@ document.addEventListener('visibilitychange', function () {
     }
 });
 
-// Add CSS for theme variations
-const themeStyles = `
-<style>
-    /* Theme variations */
-    body.theme-1 {
-        background: linear-gradient(deeppink, purple);
-        color: white;
-    }
-    body.theme-2 {
-        background: linear-gradient(lightgreen, crimson);
-        color: white;
-    }
-    body.theme-3 {
-        background: linear-gradient(blueviolet, deeppink);
-        color: white;
-    }
-    body.theme-4 {
-        background: linear-gradient(coral, blueviolet);
-        color: white;
-    }
-    body.theme-5 {
-        background: linear-gradient(#999, #111);
-        color: white;
-    }
-</style>
-`;
+
 document.head.insertAdjacentHTML('beforeend', themeStyles);
