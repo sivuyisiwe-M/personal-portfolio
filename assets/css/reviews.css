@@ -8,7 +8,12 @@
 body {
 	margin: 0;
 }
-
+header .navbar ul li a.active,
+header .navbar ul li a:hover {
+  color: #011aff;
+  border-bottom: 0.2rem solid #011aff;
+  padding: 0.5rem 0;
+}
 .void {
 	width: 100%;
 	max-width: 1024px;
@@ -178,3 +183,137 @@ svg {
 	display: block;
 	background-image: linear-gradient(180deg, rgba(60, 26, 229, 0) 0%, #3C1AE5 50%, rgba(60, 26, 229, 0) 100%);
 }
+
+/* reviews section end */
+
+/* recommendation form and pop up  starts */
+
+/* Recommendation Form Styles */
+.recommendation-form {
+	max-width: 600px;
+	margin: 3rem auto;
+	padding: 2rem;
+	background: #fff;
+	border-radius: 10px;
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .recommendation-form h2 {
+	text-align: center;
+	margin-bottom: 1.5rem;
+	color: #3B2ED0;
+  }
+  
+  .form-group {
+	margin-bottom: 1.5rem;
+  }
+  
+  .form-group label {
+	display: block;
+	margin-bottom: 0.5rem;
+	font-weight: 500;
+  }
+  
+  .form-group input,
+  .form-group textarea {
+	width: 100%;
+	padding: 0.8rem;
+	border: 1px solid #ddd;
+	border-radius: 5px;
+	font-family: 'Inter', sans-serif;
+  }
+  
+  .submit-btn {
+	background: #3B2ED0;
+	color: white;
+	border: none;
+	padding: 0.8rem 1.5rem;
+	border-radius: 5px;
+	cursor: pointer;
+	font-weight: 500;
+	transition: background 0.3s;
+  }
+  
+  .submit-btn:hover {
+	background: #2a1fa0;
+  }
+  
+  /* Popup Styles */
+  .popup {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.5);
+	z-index: 1000;
+	justify-content: center;
+	align-items: center;
+  }
+  
+  .popup-content {
+	background-color: #fff;
+	width: 90%;
+	max-width: 400px;
+	padding: 2rem;
+	border-radius: 10px;
+	position: relative;
+	text-align: center;
+	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+	animation: popupFadeIn 0.4s;
+  }
+  
+  @keyframes popupFadeIn {
+	from {transform: scale(0.8); opacity: 0;}
+	to {transform: scale(1); opacity: 1;}
+  }
+  
+  .close-btn {
+	position: absolute;
+	top: 10px;
+	right: 15px;
+	font-size: 24px;
+	cursor: pointer;
+	color: #888;
+  }
+  
+  .close-btn:hover {
+	color: #333;
+  }
+  
+  .popup-message {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+  }
+  
+  .popup-message i {
+	font-size: 3rem;
+	color: #4CAF50;
+	margin-bottom: 1rem;
+  }
+  
+  .popup-message h3 {
+	margin-bottom: 0.5rem;
+	color: #333;
+  }
+  
+  .popup-message p {
+	color: #666;
+  }
+  
+  /* Show the popup */
+  .popup.show {
+	display: flex;
+  }
+  /* recommendation and popup ends */
+
+
+
+
+
+
+
+
+
