@@ -4,178 +4,311 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reviews</title>
-</head>
-<body>
+    <!-- Your existing head content remains the same -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/reviews.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link id='favicon' rel="shortcut icon" href="./assets/images/favico.png" type="image/x-png">
     
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="keywords" content="SIVUYISIWE Mgijima portfolio, full stack dev, personal portfolio lifecodes, portfolio design, portfolio website, personal portfolio" />
-        <meta name="description" content="Welcome to siwe's Portfolio. Full-Stack Web Developer and Android App Developer" />
-        <!-- Custom CSS -->
-        <link rel="stylesheet" href="./assets/css/style.css">
-        <link rel="stylesheet" href="/assets/css/reviews.css">
-        <!-- Font Awesome -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <!-- Favicon -->
-        <link id='favicon' rel="shortcut icon" href="./assets/images/favico.png" type="image/x-png">
-       
-        <title>reviews | Sivuyisiwe Mgijima</title>
-    </head>
-    <body oncontextmenu="return false">
-    
-    <!-- navbar starts -->
-    <header>
-            <a href="/" class="logo"><i class="fab fa-js"></i> siwe</a>
-    
-            <div id="menu" class="fas fa-bars"></div>
-            <nav class="navbar">
-                <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="skills.html">Skills</a></li>
-                <li><a href="education.html">Education</a></li>
-                <li><a href="work.html">projects</a></li>
-                <li><a href="experience.html">Experience</a></li>
-                <li><a class="active" href="reviews.html">recommendations</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
-    </header>
-    <!-- navbar ends -->
-    
-    <!-- reviews section starts -->
-<section class="reviews" id="reviews">
+    <!-- Firebase App (the core Firebase SDK) -->
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+    <!-- Firebase Firestore -->
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore-compat.js"></script>
 
+    <title>recommendations | Sivuyisiwe Mgijima</title>
+</head>
+<body oncontextmenu="return false">
+
+<!-- navbar starts -->
+<header>
+    <a href="/" class="logo"><i class="fab fa-js"></i> siwe</a>
+
+    <div id="menu" class="fas fa-bars"></div>
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="skills.html">Skills</a></li>
+            <li><a href="education.html">Education</a></li>
+            <li><a href="work.html">projects</a></li>
+            <li><a href="experience.html">Experience</a></li>
+            <li><a class="active" href="reviews.html">recommendations</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+<!-- navbar ends -->
+
+<!-- reviews section starts -->
+<section class="reviews" id="reviews">
     <div class="void" id="void">
         <div class="crop">
-        <ul id="card-list" style="--count: 6;" class="rotating-items">
-            <li><div class="card"><a href=""><span class="model-name">Ziyanda Tom</span><span>I was really impressed by how quickly I found everything I needed. Great layout, solid content, and fast loading—what more could you ask for?</span></a></div></li>
-            <li><div class="card"><a href=""><span class="model-name">Chumasande Mooi</span><span>I appreciate how responsive the site i asked for is. Looks just as good on my phone as it does on desktop. Not something you see every daya</span></a></div></li>
-            <li><div class="card"><a href=""><span class="model-name">Zeeya Skins and Decor</span><span>Working with Sivuyisiwe  was an absolute pleasure. The website they created for us completely transformed our online presence. We’ve seen a huge increase in engagement and sales since the redesign.</span></a></div></li>
-            <li><div class="card"><a href=""><span class="model-name">Cele Decor</span><span>I couldn’t be happier with the mobile app Sivuyisiwe built for our team. It’s intuitive, fast, and has made a huge difference in how we manage day-to-day operations. The attention to detail was top-notch</span></a></div></li>
-            <li><div class="card"><a href=""><span class="model-name">James H., CEO of EcoSolutions</span><span>We approached Sivuyisiwe to develop a custom e-commerce platform, and they delivered beyond our expectations. The site is user-friendly, and the design perfectly reflects our brand’s personality.</span></a></div></li>
-                    <li><div class="card"><a href=""><span class="model-name"> Emily T., Marketing Director at LuxeRetail</span><span>The logo and branding package Sivuyisiwe created for our company is exactly what we needed. The design feels fresh and professional, and we’ve received numerous compliments from clients and partners alike</span></a></div></li>
-        </ul>
-        <div class="last-circle"></div>
-        <div class="second-circle"></div>
+            <ul id="card-list" style="--count: 6;" class="rotating-items">
+                <!-- Default testimonials will be here -->
+                <!-- Dynamic testimonials from Firebase will be added here by JavaScript -->
+            </ul>
+            <div class="last-circle"></div>
+            <div class="second-circle"></div>
         </div>
         <div class="mask"></div>
         <div class="center-circle"></div>
-    <div>
-
+    </div>
 </section>
-  <!-- reviews sections ends -->
-    
+<!-- reviews sections ends -->
 
-  <!-- recommendation form -->
-  <section class="recommendation-form">
+<!-- recommendation form -->
+<section class="recommendation-form">
     <h2>Submit a Recommendation</h2>
     <form id="recommendationForm">
-      <div class="form-group">
-        <label for="name">Your Name</label>
-        <input type="text" id="name" name="name" required>
-      </div>
-      <div class="form-group">
-        <label for="email">Your Email</label>
-        <input type="email" id="email" name="email" required>
-      </div>
-      <div class="form-group">
-        <label for="recommendation">Your Recommendation</label>
-        <textarea id="recommendation" name="recommendation" rows="4" required></textarea>
-      </div>
-      <button type="submit" class="submit-btn">Submit Recommendation</button>
+        <div class="form-group">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Your Email</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+            <label for="recommendation">Your Recommendation</label>
+            <textarea id="recommendation" name="recommendation" rows="4" required></textarea>
+        </div>
+        <button type="submit" class="submit-btn">Submit Recommendation</button>
     </form>
-  </section>
-  <!-- recommendation form ends -->
+</section>
+<!-- recommendation form ends -->
 
-  
-  <!-- pop up section starts -->
-
-  <div id="popup" class="popup">
+<!-- pop up section starts -->
+<div id="popup" class="popup">
     <div class="popup-content">
-      <span class="close-btn">&times;</span>
-      <div class="popup-message">
-        <i class="fas fa-check-circle"></i>
-        <h3>Thank you for submitting a recommendation!</h3>
-        <p>We appreciate your feedback.</p>
-      </div>
+        <span class="close-btn">&times;</span>
+        <div class="popup-message">
+            <i class="fas fa-check-circle"></i>
+            <h3>Thank you for submitting a recommendation!</h3>
+            <p>We appreciate your feedback.</p>
+        </div>
     </div>
-  </div>
-  <!-- pop up sections ends -->
+</div>
+<!-- pop up sections ends -->
 
+<!-- footer section stays the same -->
+<section class="footer">
+    <div class="box-container">
+        <div class="box">
+            <h3>Sivuyisiwe mgijima's Portfolio</h3>
+            <p>Thank you for visiting my personal portfolio website. </p>
+        </div>
 
+        <div class="box">
+            <h3>quick links</h3>
+            <a href="index.html"><i class="fas fa-chevron-circle-right"></i> home</a>
+            <a href="about.html"><i class="fas fa-chevron-circle-right"></i> about</a>
+            <a href="skills.html"><i class="fas fa-chevron-circle-right"></i> skills</a>
+            <a href="education.html"><i class="fas fa-chevron-circle-right"></i> education</a>
+            <a href="work.html"><i class="fas fa-chevron-circle-right"></i> projects</a>
+            <a href="experience.html"><i class="fas fa-chevron-circle-right"></i> experience</a>
+            <a href="reviews.html"> <i class="fas fa-chevron-circle-right"></i>recommendations</a>
+        </div>
 
-
-    <!-- footer section starts -->
-    <section class="footer">
-    
-      <div class="box-container">
-    
-          <div class="box">
-              <h3>Sivuyisiwe mgijima's Portfolio</h3>
-              <p>Thank you for visiting my personal portfolio website. </p>
-          </div>
-    
-          <div class="box">
-              <h3>quick links</h3>
-              <a href="index.html"><i class="fas fa-chevron-circle-right"></i> home</a>
-              <a href="about.html"><i class="fas fa-chevron-circle-right"></i> about</a>
-              <a href="skills.html"><i class="fas fa-chevron-circle-right"></i> skills</a>
-              <a href="education.html"><i class="fas fa-chevron-circle-right"></i> education</a>
-              <a href="work.html"><i class="fas fa-chevron-circle-right"></i> projects</a>
-              <a href="experience.html"><i class="fas fa-chevron-circle-right"></i> experience</a>
-              <a href="reviews.html"> <i class="fas fa-chevron-circle-right"></i>recommendations</a>
-          </div>
-    
-          <div class="box">
-              <h3>contact info</h3>
-              <p> <i class="fas fa-phone"></i>+27 683150682</p>
-              <p> <i class="fas fa-envelope"></i>sivuyisiwe.mgijima6.com</p>
-              <p> <i class="fas fa-map-marked-alt"></i>cape town, South Africa -7784</p>
-              <div class="share">
-    
+        <div class="box">
+            <h3>contact info</h3>
+            <p> <i class="fas fa-phone"></i>+27 683150682</p>
+            <p> <i class="fas fa-envelope"></i>sivuyisiwe.mgijima6.com</p>
+            <p> <i class="fas fa-map-marked-alt"></i>cape town, South Africa -7784</p>
+            <div class="share">
                 <a class="linkedin" aria-label="LinkedIn" href="https://www.linkedin.com/in/sivuyisiwe-mgijima-3b873611a/" target="_blank"><i class="fab fa-linkedin"></i></a> 
                 <a class="github" aria-label="GitHub" href="https://github.com/milly66087" target="_blank"><i class="fab fa-github"></i></a>
                 <a href="/contact.html" class="fas fa-envelope" aria-label="Mail" target="_blank"></a>
-                 
-              </div>
-          </div>
-      </div>
-    
-      <h1 class="credit">Designed with <i class="fa fa-heart pulse"></i> by <a href="https://www.linkedin.com/in/sivuyisiwe-mgijima-3b873611a"> Sivuyisiwe Mgijima</a></h1>
-    
-    </section>
-    
-    
-    
-    <!-- footer section ends -->
-    
-    <!-- scroll top btn -->
-    <a href="#reviews" aria-label="ScrollTop" class="fas fa-angle-up" id="scroll-top"></a>
-    <!-- scroll back to top -->
-    
-    <!-- jquery cdn -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    
-    <!-- vanilla tilt.js links -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js" integrity="sha512-SttpKhJqONuBVxbRcuH0wezjuX+BoFoli0yPsnrAADcHsQMW8rkR84ItFHGIkPvhnlRnE2FaifDOUw+EltbuHg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    
-    <!-- scroll reveal anim -->
-    <script src="https://unpkg.com/scrollreveal"></script>
-    
-    <script src="./assets/js/script.js"></script>
-    <script src="./assets/js/recommendation.js"></script>
-    
-    </body>
-    </html>
+            </div>
+        </div>
+    </div>
 
+    <h1 class="credit">Designed with <i class="fa fa-heart pulse"></i> by <a href="https://www.linkedin.com/in/sivuyisiwe-mgijima-3b873611a"> Sivuyisiwe Mgijima</a></h1>
+</section>
+<!-- footer section ends -->
 
+<!-- scroll top btn -->
+<a href="#reviews" aria-label="ScrollTop" class="fas fa-angle-up" id="scroll-top"></a>
+<!-- scroll back to top -->
 
+<!-- jquery cdn -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
+<!-- vanilla tilt.js links -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js" integrity="sha512-SttpKhJqONuBVxbRcuH0wezjuX+BoFoli0yPsnrAADcHsQMW8rkR84ItFHGIkPvhnlRnE2FaifDOUw+EltbuHg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
+<!-- scroll reveal anim -->
+<script src="https://unpkg.com/scrollreveal"></script>
+
+<script src="./assets/js/script.js"></script>
+
+<!-- Updated script for recommendations -->
+<script>
+    // Firebase configuration
+    const firebaseConfig = {
+        apiKey: "AIzaSyBrCO0TMUkI5xq_5XP2Gdlac2zPvZvzvT4",
+        authDomain: "personalportfolio-6e3f7.firebaseapp.com",
+        projectId: "personalportfolio-6e3f7",
+        storageBucket: "personalportfolio-6e3f7.firebasestorage.app",
+        messagingSenderId: "437625414586",
+        appId: "1:437625414586:web:40faff67d95e06183cb383",
+        measurementId: "G-SSME2KJRP9"
+    };
+
+    // Initialize Firebase with compat version
+    firebase.initializeApp(firebaseConfig);
+    
+    // Initialize Firestore
+    const db = firebase.firestore();
+
+    // Default recommendations
+    const defaultRecommendations = [
+        { name: "Ziyanda Tom", text: "I was really impressed by how quickly I found everything I needed. Great layout, solid content, and fast loading—what more could you ask for?" },
+        { name: "Chumasande Mooi", text: "I appreciate how responsive the site i asked for is. Looks just as good on my phone as it does on desktop. Not something you see every day" },
+        
+        ];
+
+    // Function to create a testimonial card element
+    function createTestimonialCard(name, text) {
+        return `<li><div class="card"><a href=""><span class="model-name">${name}</span><span>${text}</span></a></div></li>`;
+    }
+
+    // Function to display recommendations
+    function displayRecommendations(recommendations) {
+        const cardList = document.getElementById('card-list');
+        cardList.innerHTML = ''; // Clear existing cards
+        
+        // Update the card count based on the number of recommendations
+        cardList.style.setProperty('--count', recommendations.length);
+        
+        // Add all recommendations to the display
+        recommendations.forEach(rec => {
+            cardList.innerHTML += createTestimonialCard(rec.name, rec.text);
+        });
+    }
+
+    // Function to fetch recommendations from Firebase
+    function fetchRecommendations() {
+        // Start with default recommendations
+        let allRecommendations = [...defaultRecommendations];
+        
+        // Get recommendations from Firebase
+        db.collection("recommendations").orderBy("timestamp", "desc").limit(10).get()
+            .then((querySnapshot) => {
+                // Add Firebase recommendations to our array
+                querySnapshot.forEach((doc) => {
+                    const data = doc.data();
+                    allRecommendations.push({
+                        name: data.name,
+                        text: data.recommendation
+                    });
+                });
+                
+                // Display all recommendations
+                displayRecommendations(allRecommendations);
+            })
+            .catch((error) => {
+                console.error("Error getting recommendations: ", error);
+                // If there's an error, just show the default recommendations
+                displayRecommendations(defaultRecommendations);
+            });
+    }
+
+    // Handle form submission
+    const recommendationForm = document.getElementById('recommendationForm');
+    const popup = document.getElementById('popup');
+    const closeBtn = document.querySelector('.close-btn');
+
+    recommendationForm.addEventListener('submit', function(event) {
+        event.preventDefault();
+        
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const recommendationText = document.getElementById('recommendation').value;
+        
+        // Add a new document to Firestore
+        db.collection("recommendations").add({
+            name: name,
+            email: email,
+            recommendation: recommendationText,
+            timestamp: firebase.firestore.FieldValue.serverTimestamp()
+        })
+        .then(() => {
+            console.log("Recommendation successfully saved!");
+            popup.classList.add('show');
+            recommendationForm.reset();
+            
+            // Refresh the recommendations display to include the new submission
+            fetchRecommendations();
+        })
+        .catch((error) => {
+            console.error("Error saving recommendation: ", error);
+        });
+    });
+
+    // Close popup
+    closeBtn.addEventListener('click', function() {
+        popup.classList.remove('show');
+    });
+
+    // Load recommendations when the page loads
+    document.addEventListener('DOMContentLoaded', fetchRecommendations);
+</script>
+
+<!-- Additional CSS for popup animation -->
+<style>
+    .popup {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.7);
+        z-index: 1000;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .popup.show {
+        display: flex;
+        animation: fadeIn 0.3s;
+    }
+    
+    .popup-content {
+        background-color: white;
+        padding: 30px;
+        border-radius: 10px;
+        text-align: center;
+        position: relative;
+        max-width: 500px;
+        width: 80%;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        animation: scaleIn 0.3s;
+    }
+    
+    .close-btn {
+        position: absolute;
+        top: 10px;
+        right: 15px;
+        font-size: 24px;
+        cursor: pointer;
+    }
+    
+    .popup-message i {
+        font-size: 50px;
+        color: #4CAF50;
+        margin-bottom: 20px;
+    }
+    
+    @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+    }
+    
+    @keyframes scaleIn {
+        from { transform: scale(0.8); }
+        to { transform: scale(1); }
+    }
+</style>
 </body>
 </html>
