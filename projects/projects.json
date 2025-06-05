@@ -1,58 +1,25 @@
-// [
-//     {
-//         "name": "Chatbot",
-//         "desc": "chatbot built using no code tools: landbot and dialogflow",
-//         "image": "chatbotFrontend",
-//         "category": "basicweb",
-//         "links": {
-//           "view": "https://landbot.online/v3/H-2887235-4OBEO6RDVQYT9AHU/index.html",
-//           "code": "#"
-//         }
-//       }
-//       ,
-//   {
-//     "name": "Weatherly Android",
-//     "desc": "Native android app built using Java, XML and Volley dependencies. Provides weather forecast.",
-//     "image": "weatherlyandroid",
-//     "category": "android",
-//     "links": {
-//       "view": "https://www.linkedin.com/posts/jigar-sable_androiddev-androidstudio-java-activity-6955224473822199808-JT0j",
-//       "code": "https://github.com/jigar-sable/weatherly-android"
-//     }
-//   },
-
-//   {
-//     "name": "JavaScript Projects Website",
-//     "desc": "This website is specially build to showcase all major javaScript projects. All my javaScript based projects are in it.",
-//     "image": "jspro",
-//     "category": "basicweb",
-//     "links": {
-//       "view": "https://jigar-sable.github.io/JavaScript-Projects",
-//       "code": "https://github.com/jigar-sable/JavaScript-Projects"
-//     }
-//   },
-
-//   {
-//     "name": "Hulu Website",
-//     "desc": "Hulu website built using NextJS and tailwindCSS. API used TMDB, deployed on vercel.",
-//     "image": "hulu",
-//     "category": "mern",
-//     "links": {
-//       "view": "https://hulu-clone-jigar-sable.vercel.app/",
-//       "code": "#"
-//     }
-//   },
-//   {
-//     "name": "Python projects website",
-//     "desc": "This website is specially build to showcase all major python projects. All my python based projects are in it.",
-//     "image": "portfolio1",
-//     "category": "basicweb",
-//     "links": {
-//       "view": "#",
-//       "code": "http://127.0.0.1:5501/index.html"
-//     }
-//   }
+[
+    {
+        "name": "Chatbot",
+        "desc": "chatbot built using no code tools: landbot and dialogflow",
+        "image": "chatbotFrontend",
+        "category": "basicweb",
+        "links": {
+          "view": "https://landbot.online/v3/H-2887235-4OBEO6RDVQYT9AHU/index.html",
+          "code": "#"
+        }
+      }
+      ,
+  {
+    "name": "job portal ",
+    "desc": "web app built using html,css,javascript,firebase",
+    "image": "joblogo",
+    "category": "mern",
+    "links": {
+      "view": "https://68414cd9009171a8732cf424--deluxe-beijinho-7e5471.netlify.app/",
+      "code": "https://github.com/sivuyisiwe-M/ArtificiaX-S"
+    }
+  }
 
 
-
-// ]
+]
