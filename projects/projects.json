@@ -12,12 +12,23 @@
       ,
   {
     "name": "job portal ",
-    "desc": "web app built using html,css,javascript,firebase",
+    "desc": "web app built using html,css,javascript,firebase, netlify",
     "image": "joblogo",
     "category": "mern",
     "links": {
       "view": "https://68414cd9009171a8732cf424--deluxe-beijinho-7e5471.netlify.app/",
       "code": "https://github.com/sivuyisiwe-M/ArtificiaX-S"
+    }
+  },
+
+    {
+    "name": "CAPACITI website ",
+    "desc": "web app built using html,css,javascript,supabase, netlify",
+    "image": "capaciti",
+    "category": "mern",
+    "links": {
+      "view": "https://shiny-biscotti-87554e.netlify.app/",
+      "code": "#"
     }
   }
 
